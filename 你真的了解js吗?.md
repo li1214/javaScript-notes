@@ -209,4 +209,20 @@ for (var i = start; i <= end; i++) {
 }
 console.log(count);
 ```
+### 17.以下代码输出的是什么。
+```
+var length = 10;
+function fn () {
+console.log(this)
+    console.log(this.length)
+}
+var obj = {
+    length : 5,
+    method : function (fn) {
+        fn();
+        arguments[0]();
+    }
+}
+obj.method(fn, 1);
+```
 
