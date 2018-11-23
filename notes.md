@@ -338,6 +338,52 @@ http 状态码
 
 ```
 
+ ### 数据库
+ 
+ #### 1.数据库分类
+ 
+    |         | 关系型    |  非关系型  |
+        :-:   | :-:       | :-:
+    | 实时       | MySql、Oracle、DB2、SqlServer      |   MongoDB、Redis、Memcache   |
+    | 非实时        | Hive     |   HBase、ElasticSearch  |
+
+    2013年阿里巴巴提出去I(IBM小型机)O(Oracle)E(EMC存储设备)
+    
+#### 常用数据里命令
+
+- show databases   ==>  显示手游的数据库。
+- user 数据库名称  ==> 链接数据库
+- show tables ==> 显示数据库里的所有表
+- select keyword from tablename;
+- create datebase '数据库名';
+```
+    创建表的规定：必须有唯一标识(id)，且不能有任何意义。
+    常用type字段分类：
+        1.整数int
+        2.长整数bigint(21)
+        3.浮点数float
+        4.双精度浮点数double
+        5.字符串varchart(num) num为字符串长度
+        6.文本text
+    表常用引擎：
+        1.MYISAM：读很多，写的很少，写是表级锁。
+        2.InnoDB：读较多，写较多，行级锁。
+```
+- insert into 表名 ( `字段`,`字段`) values (1,'值') ==> 增加数据
+- update tablename set age =  19 where name = '熊猫' ==> 修改数据要添加限制条件，否则会修改全表字段
+- select name,age from test ==> 查询命令
+```
+    <!--tests为表名-->
+    select * from tests where age = 18 or age = 19; //or为或  and为且
+    select count(1) from tests;
+    select sum(age) from tests;
+    select avg(age) from tests;
+    select age,count(1) from tests group by(age);
+    select * from tests limit 2,2;  //前面是偏移量，后面是每一页的个数
+    select * from tests order by id desc limit 2,2; //加desc为倒序 不加为顺序
+```
+- delete from tests where name = '熊猫';
+
 ### 一些方法的封装
 
 1.对象原型继承(圣杯模式的封装）
