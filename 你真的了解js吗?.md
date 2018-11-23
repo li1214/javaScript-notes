@@ -8,8 +8,8 @@
 	null instanceof Object							
 	typeof(NaN);							
 	typeof([])                          
-    isNaN('abc'); 
-    isNaN(undefined)
+        isNaN('abc'); 
+        isNaN(undefined)
 ```
 ### 2.写出console.log()的打印值；
 ```
@@ -28,23 +28,23 @@
 ```
 ### 3.写出下面函数的运行结果，如果报错用err表示，如果没有结果，用null表示
 ```
-	function b() {
-	    var d=123;
+	function b () {
+	    var d = 123;
 	    console.log(d)
 	};
 	b(1);
 
-	function b1(d) {
-	    var d=123;
+	function b1 (d) {
+	    var d = 123;
 	    console.log(d)
 	}()
 
-	function b2(a,b) {
-	    console.log(a+b)
+	function b2 (a,b) {
+	    console.log(a + b)
 	}(1, 2);
 
-	var r3 = function b3() {
-	    var d=123;
+	var r3 = function b3 () {
+	    var d = 123;
 	    console.log(d)
 	}();
 ```
@@ -59,21 +59,21 @@
 	* function() {}();
 	/ function(){}();                                                                        
 	false||function() {}();
-    true ||function() {}();
+        true ||function() {}();
 ```
 ### 5.写出f的类型,x的值；
 ```
 	var f = (
-	    function f() {
+	    function f () {
 	        return '1';
 	    },
-	    function g() {
+	    function g () {
 	        return 2
 	    }
 	)();
 	typeof(f);                          
 
-	var x=1;
+	var x = 1;
 	if( function h (){} ){
 		x += typeof h;
 	}
@@ -82,7 +82,7 @@
 
 ### 6.写出下列构造函数的返回的对象；
 ```
-	function Person(name,sex){
+	function Person (name, sex){
 		this.name = name,
 		this.sex = sex;
 	}
@@ -90,18 +90,18 @@
 	console.log(person);                        
 
 
-	function Person1(name.sex){
-		this.name=name,
-		this.sex=sex;
+	function Person1 (name.sex){
+		this.name = name,
+		this.sex = sex;
 		return {};
 	}
 	var person1= new Person1('小王','男');
 	console.log(person1);                         
 
 
-	function Person2(name.sex){
-		this.name=name,
-		this.sex=sex;
+	function Person2 (name.sex) {
+		this.name = name,
+		this.sex = sex;
 		return 1;
 	}
 	var person2= new Person2('小王','男');
@@ -111,7 +111,7 @@
 ```
 	var str = 'abcd';
 	console.log(str.length)                        
-	str.length=2;
+	str.length = 2;
 	console.log(str)                                
 	str + - + + + - + - - + 1;
 	var test = typeof(str);
